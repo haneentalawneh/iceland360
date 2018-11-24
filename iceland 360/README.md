@@ -24,4 +24,4 @@ I liked the stitching and editing process as it's something totally new to me to
 
 Challenges :
 
-Streaming video from the internet in unity video player, youtube doesn't work, I had to use dropbox but the video rendering is a bit slow, so one of the videos is streamed online and the other is local. 
+Streaming video from the internet in unity video player, where a tradeoff had to be done, the video quality had to be lower so the streaming can be faster, but game size is significantly smaller 

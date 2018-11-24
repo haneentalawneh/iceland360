@@ -6,7 +6,6 @@ using UnityEngine.Video;
 public class GameLogic : MonoBehaviour
 {
 	public GameObject[] screens;
-	public VideoClip[] movies;
 	public GameObject movieScreen;
 	public GameObject rain;
 	VideoPlayer videoPlayer;
@@ -26,19 +25,16 @@ public class GameLogic : MonoBehaviour
 
 	void Update ()
 	{
-		Debug.Log("frame:" + videoPlayer.time);
-		Debug.Log ((double)videoPlayer.url.Length);
-
 		if (!videoPlayer.isPlaying && !isFinished) {
 			if (videoPlayer != null) {
-				if (videoPlayer.frame != null) {
-					
-					if ((double)videoPlayer.url.Length == videoPlayer.time) {
-						//Video has finshed playing!
-					
-						toggleObject (playAgain);
-						isFinished = true;
-					}
+				if (videoPlayer.time >= 29.5) {
+					//Video has finshed playing!
+					play.SetActive (false);
+					pause.SetActive (false);
+					toggleObject (playAgain);
+
+					src.Stop ();
+					isFinished = true;
 				}
 			}
 		}
@@ -62,24 +58,23 @@ public class GameLogic : MonoBehaviour
 	{
 		this.index = index;
 		toggleMenu ();
+		videoPlayer.url = (index != 0) ? @"https://dl.dropbox.com/s/3i7kcyf8hkcffxa/WaterFalls.m4v": @"https://dl.dropbox.com/s/2vzt0lycm02lwes/Geysir.m4v";
 		PlayMovie ();
 
 	}
 
-	//public void
-
 	public void OnPauseClicked ()
 	{
-		src.Stop ();
 		if (videoPlayer != null) {
 			
 			if (videoPlayer.isPlaying) {
 				videoPlayer.Pause ();
+				src.Pause ();
 			
 			} else {
 				videoPlayer.Play ();
+				src.Play ();
 			}
-
 
 			toggleObject (play);
 			toggleObject (pause);
@@ -97,9 +92,10 @@ public class GameLogic : MonoBehaviour
 		isFinished = false;
 		playAgain.SetActive (false);
 
-		//videoPlayer.clip = movies [this.index];
 		videoPlayer.Prepare ();
 		videoPlayer.Play ();
+		pause.SetActive (true);
+		src.Play ();
 	
 	}
 
@@ -110,11 +106,8 @@ public class GameLogic : MonoBehaviour
 		toggleObject (rain);
 		toggleObject (movieScreen);
 
-		if (movieScreen.activeSelf == true) {
-			src.Play ();
-		} else {
+		if (!movieScreen.activeSelf) {
 			src.Stop ();
 		}
 	}
-
 }

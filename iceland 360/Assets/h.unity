@@ -576,7 +576,6 @@ GameObject:
   - component: {fileID: 321253261}
   - component: {fileID: 321253260}
   - component: {fileID: 321253259}
-  - component: {fileID: 321253264}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -607,7 +606,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 0.169
-  m_Url: https://dl.dropbox.com/s/9nammgz6vdjsxfy/Geysir.mov
+  m_Url: https://dl.dropbox.com/s/2vzt0lycm02lwes/Geysir.m4v
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -682,39 +681,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &321253264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 321253258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bypassRoomEffects: 0
-  directivityAlpha: 0
-  directivitySharpness: 1
-  listenerDirectivityAlpha: 0
-  listenerDirectivitySharpness: 1
-  gainDb: 0
-  occlusionEnabled: 0
-  playOnAwake: 1
-  sourceClip: {fileID: 8300000, guid: baad5048a310d46b899eddd96d92fd19, type: 3}
-  sourceLoop: 1
-  sourceMute: 0
-  sourcePitch: 1
-  sourcePriority: 128
-  sourceSpatialBlend: 1
-  sourceDopplerLevel: 1
-  sourceSpread: 0
-  sourceVolume: 1
-  sourceRolloffMode: 0
-  sourceMaxDistance: 1.01
-  sourceMinDistance: 1
-  hrtfEnabled: 1
-  audioSource: {fileID: 0}
 --- !u!1001 &404767104
 Prefab:
   m_ObjectHideFlags: 0
@@ -2594,7 +2560,7 @@ Prefab:
     - target: {fileID: 11461060, guid: 82b70a42d67ea49d4a2e3bd826e9a512, type: 2}
       propertyPath: sourceClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4fc2bb41e005c457dbf05ea45875987f, type: 3}
+      objectReference: {fileID: 8300000, guid: baad5048a310d46b899eddd96d92fd19, type: 3}
     - target: {fileID: 11461060, guid: 82b70a42d67ea49d4a2e3bd826e9a512, type: 2}
       propertyPath: sourceMinDistance
       value: 1
