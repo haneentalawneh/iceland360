@@ -25,3 +25,8 @@ I liked the stitching and editing process as it's something totally new to me to
 Challenges :
 
 Streaming video from the internet in unity video player, where a tradeoff had to be done, the video quality had to be lower so the streaming can be faster, but game size is significantly smaller 
+
+high quality videos can be found here : 
+1. https://www.dropbox.com/s/4u8a087kkrjq7s7/WaterFalls.mov?dl=0
+2. https://www.dropbox.com/s/9nammgz6vdjsxfy/Geysir.mov?dl=0
+
