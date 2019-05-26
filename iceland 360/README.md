@@ -2,9 +2,9 @@
 
 Iceland 360 :
 
-This project is part of the udacitu VR nanodegree 
+This project is part of the udacity VR nanodegree 
 
-This game takes you to into a vr journey to iclfnad, in your trip you can either go to Iceland waterfalls or to geysir
+This game takes you to into a vr journey to icelnad, in your trip you can either go to Iceland waterfalls or to geysir
 
 Steps done to create this project :
 
